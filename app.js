@@ -1,9 +1,14 @@
 var net = require('net');
 var inquirer = require("inquirer");
 var ngrok = require('ngrok');
+var ngrok1 = require('ngrok');
 var os = require('os');
+var express = require('express');
+var app = express();
 var clients = [];
-var authtoken = '5bRPC5Lap33S7pHKZ7VsC_4cZWU3KkWELDnowrHwowo';
+var authtoken1 = '5bRPC5Lap33S7pHKZ7VsC_4cZWU3KkWELDnowrHwowo';
+var authtoken2 = 'QxfKMHe7fqRbeynYCYMC_5BFCWGsjKfq6dvshx5JJg';
+
 
 // ------------------------------   IP Servidor  ------------------------------
 // Esse código é só para mostrar o ip da sua máquina na rede local.
@@ -56,7 +61,8 @@ server.listen(PORT, function() {
 });
 */
 
-ngrok.connect({proto: 'tcp', addr: PORT, authtoken:authtoken}, function (err, url) {
+
+ngrok.connect({proto: 'tcp', addr: PORT, authtoken:authtoken2}, function (err, url) {
   server.listen(PORT, function() {
     address = server.address();
     console.log("\nServidor em %s\n", url);
@@ -64,6 +70,15 @@ ngrok.connect({proto: 'tcp', addr: PORT, authtoken:authtoken}, function (err, ur
   });
 });
 
+ngrok1.connect({proto: 'tcp', addr: 3211, authtoken:authtoken1}, function (err, urls) {
+  app.listen(3211, function() {
+	console.log("\nServidor web %s\n", urls);
+	});
+});
+
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
 
 // -------------------------------     Menu     -------------------------------
 var pergunta = function () {
