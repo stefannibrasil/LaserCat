@@ -35,13 +35,13 @@
   <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js></script>
   <script type="text/javascript">
 
-  $('.desligar').click(function() {
+  $('#desligar').click(function() {
     $.get( "/0", function( data ) {
-      console.log("oi");
+      console.log(data);
     });
   });
 
-  $('.ligar').click(function() {
+  $('#ligar').click(function() {
     $.get( "/1", function( data ) {
       console.log(data);
     });
