@@ -35,15 +35,14 @@
   <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js></script>
   <script type="text/javascript">
 
-
   $('.desligar').click(function() {
-    $.get( "0.tcp.ngrok.io/0", function( data ) {
+    $.get( "/0", function( data ) {
       console.log(data);
     });
   });
 
   $('.ligar').click(function() {
-    $.get( "0.tcp.ngrok.io/1", function( data ) {
+    $.get( "/1", function( data ) {
       console.log(data);
     });
   });
