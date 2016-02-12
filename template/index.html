@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--  <meta http-equiv="refresh" content="200"> -->
+  <!--  <meta http-equiv="refresh" content="2">-->
     <title>LaserCat</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -13,11 +13,11 @@
   <body>
     <div class="container">
       <div class="page-header">
-        <img src="img/cat.jpg" width="10%">
+
         <ul class="nav nav-tabs">
-          <li role="presentation" class="active">a</li>
-          <li role="presentation">b</li>
-          <li role="presentation"></li>
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Cat</a></li>
+            <li role="presentation"><a href="#">Log</a></li>
         </ul>
         <h1>Brincando com seu gatinho sem sair do sofá! #Meow</h1>
       </div>
@@ -36,19 +36,17 @@
   <script type="text/javascript">
 
 
-    $('.desligar').click(function() {
-      $.get( "0.tcp.ngrok.io/0", function( data ) {
-
-    $('.btn').click(function() {
-      $.get( "/0", function( data ) {
-        console.log(data);
-      });
-});
-    $('.ligar').click(function() {
-  $.get( "0.tcp.ngrok.io/1", function( data ) {
-    console.log(data);
+  $('.desligar').click(function() {
+    $.get( "0.tcp.ngrok.io/0", function( data ) {
+      console.log(data);
+    });
   });
-});
+
+  $('.ligar').click(function() {
+    $.get( "0.tcp.ngrok.io/1", function( data ) {
+      console.log(data);
+    });
+  });
 
   </script>
   </body>
