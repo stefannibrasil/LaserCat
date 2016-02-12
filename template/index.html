@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="3000">
+    <title>LaserCat</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Brincando com seu gatinho sem sair do sofá! #Meow</h1>
+      </div>
+      <p class="lead" id="sensor">Aguardando leitura.</p>
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-danger" value="0">Desligar</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-success" value="1">Ligar</button>
+        </div>
+      </div>
+    </div>
+
+  <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js></script>
+  <script type="text/javascript">
+
+    $('.btn').click(function() {
+      $.get( "0.tcp.ngrok.io:15116/1", function( data ) {
+        console.log(data);
+      });
+});
+  </script>
+  </body>
+</html>
