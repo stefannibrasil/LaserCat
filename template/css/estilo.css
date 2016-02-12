@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+  body {
+    font-family: 'Indie Flower', cursive;
+
+  }
+
+  a {
+    color: black;
+  }
+  footer {
+    padding: 1%;
+    text-align: center;
+    background-color: rgba(232, 232, 232, 0.62);
+  }
+  /* CLASS's */
+  .container{
+    padding: 10px;
+
+    box-shadow: 5px 5px 5px #ccc;
+   -webkit-box-shadow: 5px 5px 5px #ccc;
+   -moz-box-shadow: 5px 5px 5px #ccc;
+  }
+
+  .btn-group {
+    padding-left: 20%;
+  }
+
+  /* ID's*/
+  #cat {
+    width: 100%;
+    padding: 1%;
+  }
+  #gif {
+    width: 3%;
+  }
+
+  #desligar, #ligar {
+    width: 25%;
+  }
+
+  #logo {
+    width: 15%;
+    float: left;
+  }
+
+  #texto {
+    padding-top: 5%;
+  }

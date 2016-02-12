@@ -4,32 +4,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--  <meta http-equiv="refresh" content="2">-->
+    <meta http-equiv="refresh" content="200">
     <title>LaserCat</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
   </head>
-
   <body>
     <div class="container">
-      <div class="page-header">
-
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Cat</a></li>
-            <li role="presentation"><a href="#">Log</a></li>
-        </ul>
-        <h1>Brincando com seu gatinho sem sair do sofá! #Meow</h1>
+      <img src="img/logo.jpg" id="logo" />
+        <div class="page-header">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-heart"></span> Cat</a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-console"></span> Dev</a></li>
+<h3 id="texto">Brincando com seu gatinho sem sair do sofá! #Meow</h3>
+          </ul>
+        <img src="img/cat.jpg" id="cat"/>
       </div>
-      <p class="lead" id="sensor">Aguardando leitura.</p>
+      <center><p class="lead" id="sensor"><img src="img/carregando.gif" id="gif"/></p></center>
       <div class="btn-group btn-group-justified" role="group" aria-label="...">
         <div class="btn-group" role="group" >
           <button type="button" class="btn btn-danger" value="0" id="desligar"><span class="glyphicon glyphicon-off"></span> Desligar</button>
-        </div>
-        <div class="btn-group" role="group" >
+
           <button type="button" class="btn btn-success" value="1" id="ligar"><span class="glyphicon glyphicon-play-circle"></span> Ligar</button>
         </div>
       </div>
+      <br />
+      <footer>
+	<p>Copyright © 2016 by <span class="glyphicon glyphicon-console"></span>
+		<u>LaserCat</u>
+	</p>
+	</footer>
+
     </div>
 
   <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js></script>
