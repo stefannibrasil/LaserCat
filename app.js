@@ -75,9 +75,14 @@ ngrok1.connect({proto: 'tcp', addr: 3211, authtoken:authtoken1}, function (err, 
 	console.log("\nServidor web %s\n", urls);
 	});
 });
+app.set("view engine","html");
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.render(template.index);
+});
+
+app.get('/1', function (req, res) {
+  res.send('hello cat');
 });
 
 // -------------------------------     Menu     -------------------------------
