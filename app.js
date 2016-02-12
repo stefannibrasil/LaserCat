@@ -76,9 +76,27 @@ ngrok1.connect({proto: 'tcp', addr: 3211, authtoken:authtoken1}, function (err, 
 	});
 });
 
+app.use(express.static('template'));
+
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.redirect('index.html');
 });
+
+app.get('/0', function (req, res) {
+  clients.forEach(function (client) {
+	client.write("{0}");
+	client.write("\n");
+});
+});
+
+app.get('/1', function (req, res) {
+  clients.forEach(function (client) {
+	client.write("{1}");
+	client.write("\n");
+});
+});
+
 
 // -------------------------------     Menu     -------------------------------
 var pergunta = function () {
