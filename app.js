@@ -37,13 +37,7 @@ var server = net.createServer(function(socket) {
 
   // Quando um cliente manda uma informação
   socket.on('data', function (data) {
-    var valor = parseInt(data.toString());
-    if (Number.isInteger(valor)) {
-      // Essa parte é onde você adiciona a inteligência
-      valor = Math.floor((1023 - valor)/4);
-      socket.write("{" + valor + "}");
-      socket.write("\n");
-    }
+    console.log(data);
   });
 });
 
@@ -88,6 +82,7 @@ app.get('/0', function (req, res) {
 	client.write("{0}");
 	client.write("\n");
 });
+	res.end("desligar");
 });
 
 app.get('/1', function (req, res) {
@@ -95,6 +90,7 @@ app.get('/1', function (req, res) {
 	client.write("{1}");
 	client.write("\n");
 });
+	res.end("ligar");
 });
 
 
